@@ -1,5 +1,5 @@
 /* -- Exercise 1.17 --
- * Write a program to print ll the input lines that are no longer than 80 
+ * Write a program to print all the input lines that are no longer than 80 
  * characters.
  * */
 
