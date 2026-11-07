@@ -1,5 +1,5 @@
 /* -- Exercise 1.17 --
- * Write a program to print all the input lines that are no longer than 80 
+ * Write a program to print all the input lines that are longer than 80 
  * characters.
  * */
 
@@ -35,10 +35,17 @@ int main(void) {
 
 	/* iterating through it while the length is greater than zero */
 	while ((len = my_getline(line, MAXLEN)) > 0) {
-		if (len > 80) {
-			printf("%s\n", line);
+
+		/* if the line is greater than or equals 80 chars 
+		 * then print it to screen */
+		if (len >= 80) {
+			printf("%s", line);
+
+		/* else if the line is less than 80 chars, stop the execution 
+		 * of the program, (you might edit it so that nothing happens 
+		 * when this type of situation is faced) */
+		} else if (len < 80) {
+			return 0;
 		}
 	}
-
-	return 0;
 }
